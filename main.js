@@ -23,4 +23,17 @@ function updatePrice() {
 sizeSelector.addEventListener("change", updatePrice);
 
 
-//Task 3: Hangle Stock Availability 
+//Task 3: Handle Stock Availability 
+
+//Task 4: Create a Checkout event
+
+purchaseButton.addEventListener(function() {
+    const selectedSize = sizeSelector.value;
+    const product = productPrice[selectedSize];
+    
+    if(product.inStock) {
+        alert( "thanks for purchasing ${selectedSize}");
+    } else {
+        alert("sorry size is out of stock");
+    }
+});
