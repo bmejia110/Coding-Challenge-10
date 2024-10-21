@@ -24,6 +24,22 @@ sizeSelector.addEventListener("change", updatePrice);
 
 
 //Task 3: Handle Stock Availability 
+function sizeOptions() {
+    for (const size in product) {
+        const option = document.createElement("option");
+        const product = productPrice[size];
+        option.value = size;
+        option.textcontent = 
+    }
+}
+
+function updatPrinceAndStock() {
+    const selectedSize = sizeSelector.value;
+    const product = productPrice[selectedSize];
+    priceDisplay.textcontent = "$${product.price}";
+    purchaseButton.disabled = !product.inStock;
+
+}
 
 //Task 4: Create a Checkout event
 
